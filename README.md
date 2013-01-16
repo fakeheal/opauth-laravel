@@ -3,6 +3,7 @@
 **This is based on Opauth - http://opauth.org/**
 
 Authorize users with your application implementing multiple Oauth2 providers.
+Demo: http://fakeheal.eu/opauth-bundle/public/
 
 ## Currently Supported
 
@@ -36,8 +37,8 @@ After authorizing you'll be redirect to a link you've specified in:
 $config = array(
 	'Strategy' => array(
 		'Facebook' => array(
-			'app_id' => '322542281189355',
-			'app_secret' => '299c474727fe3639db08015cad56ebcb'
+			'app_id' => 'YOUR_APP_ID',
+			'app_secret' => 'YOUR_APP_SECRET'
 		)		
 	),
 	'security_salt'	=> 'YOURSALTGOESHERE!',
