@@ -31,7 +31,9 @@ Route::post('done', array('as' => 'done', function(){
 
 After authorizing you'll be redirect to a link you've specified in:
 /bundles/opauth/start.php
-```$config = array(
+
+```
+$config = array(
 	'Strategy' => array(
 		'Facebook' => array(
 			'app_id' => '322542281189355',
