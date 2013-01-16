@@ -9,8 +9,8 @@
 	    $config = array(
 			'Strategy' => array(
 				'Facebook' => array(
-					'app_id' => '322542281189355',
-					'app_secret' => '299c474727fe3639db08015cad56ebcb'
+					'app_id' => 'YOUR_APP_ID_HERE',
+					'app_secret' => 'YOUR_APP_SECRET_HERE'
 				)		
 			),
 	    	'security_salt'	=> 'YOURSALTGOESHERE!',
