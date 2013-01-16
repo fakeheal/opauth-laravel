@@ -1,4 +1,4 @@
-# Laravel OAuth 2.0
+# Laravel Opauth
 
 **This is based on Opauth - http://opauth.org/**
 
@@ -14,7 +14,8 @@ Authorize users with your application implementing multiple Oauth2 providers.
 
 http://example.com/opauth-bundle/public/facebook
 
-```Route::get('/', array('uses' => 'home@index'));
+```
+Route::get('/', array('uses' => 'home@index'));
 
 Route::get('facebook, facebook/(:any)', array('as' => 'facebook', function() {
 	Laravel\IoC::resolve('opauth-facebook');
@@ -22,9 +23,9 @@ Route::get('facebook, facebook/(:any)', array('as' => 'facebook', function() {
 
 Route::post('done', array('as' => 'done', function(){
 	$response = unserialize(base64_decode( $_POST['opauth'] ));
-    echo '<pre> ;
+    echo '<pre>';
     print_r($response);
-    echo '</pre> ;
+    echo '</pre>';
 }));
 ```
 
