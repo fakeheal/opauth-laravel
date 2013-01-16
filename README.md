@@ -22,9 +22,9 @@ Route::get('facebook, facebook/(:any)', array('as' => 'facebook', function() {
 
 Route::post('done', array('as' => 'done', function(){
 	$response = unserialize(base64_decode( $_POST['opauth'] ));
-    echo("<pre>");
+    echo '<pre> ;
     print_r($response);
-    echo("</pre>");
+    echo '</pre> ;
 }));
 ```
 
@@ -41,6 +41,7 @@ After authorizing you'll be redirect to a link you've specified in:
 	'path' 			=> '/opauth-bundle/public/',
 	'callback_transport' => 'post',
 	'callback_url'	=> '/opauth-bundle/public/done'
-);```
+);
+```
 
 #DO NOT FORGET TO CHANGE YOUR APP_ID & APP_SECRET
