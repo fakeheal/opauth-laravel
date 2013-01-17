@@ -1,4 +1,5 @@
-# Laravel Opauth
+# Opauth For Laravel
+__Version 0.2 - Release Date: 17.01.2013__
 
 **This is based on Opauth - http://opauth.org/**
 
@@ -8,6 +9,7 @@ Demo: http://fakeheal.eu/opauth-bundle/public/
 ## Currently Supported
 
 - Facebook
+- Twitter
 
 ** I've only tested it with Facebook. This does not mean that it won't work for other Oauth2 providers. Refer to http://opauth.org/ for help on implementing it. **
 
@@ -47,5 +49,5 @@ $config = array(
 	'callback_url'	=> '/opauth-bundle/public/done'
 );
 ```
-
-#DO NOT FORGET TO CHANGE YOUR APP_ID & APP_SECRET
+ 
+##DO NOT FORGET TO CHANGE YOUR APP_ID & APP_SECRET
