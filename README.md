@@ -1,10 +1,9 @@
-# Opauth For Laravel
+# Opauth For Laravel 3.x
 __Version 0.2 - Release Date: 17.01.2013__
 
 **This is based on Opauth - http://opauth.org/**
 
 Authorize users with your application implementing multiple Oauth2 providers.
-Demo: http://fakeheal.eu/opauth-bundle/public/
 
 ## Currently Supported
 
