@@ -1,3 +1,6 @@
+###This branch is only for reference and is not longer supported.
+## If you're using Laravel 4, checkout the branch for Laravel 4.
+## If you're using Laravel 5, checkout the branch for Laravel 5.
 # Opauth For Laravel 3.x
 __Version 0.2 - Release Date: 17.01.2013__
 
@@ -10,7 +13,7 @@ Authorize users with your application implementing multiple Oauth2 providers.
 - Facebook
 - Twitter
 
-** I've only tested it with Facebook. This does not mean that it won't work for other Oauth2 providers. Refer to http://opauth.org/ for help on implementing it. **
+**I've only tested it with Facebook. This does not mean that it won't work for other Oauth2 providers. Refer to http://opauth.org/ for help on implementing it.**
 
 ## Usage Example
 
