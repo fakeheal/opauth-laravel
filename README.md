@@ -27,7 +27,7 @@ Route::any('opauth/social/{strategy}/{action?}', function () {
 
 Publish the config file and add your strategies:
 
-`php artisan config:publish socialism/laravel-opauth` 
+`php artisan config:publish fakeheal/opauth-laravel` 
 
 Config options:
 https://github.com/opauth/opauth/wiki/Opauth-configuration
