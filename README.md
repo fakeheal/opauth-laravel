@@ -13,17 +13,9 @@ Authorize users with your application implementing multiple Oauth2 providers.
 
 ## Usage Example
 
-http://example.com/opauth/social/facebook
+Add this to your `app.php` array of providers:
 
-```php
-Route::get('/', function () {
-    echo '<a href="/opauth/social/facebook">Login with facebook</a>';
-});
-
-Route::any('opauth/social/{strategy}/{action?}', function () {
-    app('opauth')->run();
-});
-```
+`'Fakeheal\OpauthLaravel\OpauthLaravelServiceProvider'`
 
 Publish the config file and add your strategies:
 
@@ -45,5 +37,20 @@ return [
     'path' => '/opauth/social/' //This must match the route for app('opauth')->run();
 ];
 ```
+
+Add this to your `routes.php`:
+
+```php
+Route::get('/', function () {
+    echo '<a href="/opauth/social/facebook">Login with facebook</a>';
+});
+
+Route::any('opauth/social/{strategy}/{action?}', function () {
+    app('opauth')->run();
+});
+```
+Open
+http://localhost:8000/opauth/social/facebook
+
  
 ##DO NOT FORGET TO CHANGE YOUR APP_ID & APP_SECRET

@@ -9,8 +9,8 @@
 return [
     'Strategy' => array(
         'Facebook' => array(
-            'app_id' => '368848319968353',
-            'app_secret' => 'f405fb30ae8225a7db40df904698fb73'
+            'app_id' => 'APP_ID',
+            'app_secret' => 'APP_SECRET'
         )
     ),
     'security_salt' => 'RANDOM SOME HASH!',
