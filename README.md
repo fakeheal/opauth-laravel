@@ -1,5 +1,5 @@
 # Opauth For Laravel 4.x
-__Version 0.2 - Release Date: 10.05.2016__
+__Version 1.0 - Release Date: 10.05.2016__
 
 **This is based on Opauth - http://opauth.org/**
 
@@ -11,11 +11,27 @@ Authorize users with your application implementing multiple Oauth2 providers.
 
 **I've only tested it with Facebook. This does not mean that it won't work for other Oauth2 providers. Refer to http://opauth.org/ for help on implementing it.**
 
+## Installation
+
+Run: 
+`composer require fakeheal/opauth-laravel ~dev-laravel-4`
+
+Or add this to your `composer.json`:
+
+`"fakeheal/opauth-laravel": "dev-laravel-4",`
+
 ## Usage Example
+
+Install a strategy using composer:
+
+`composer require opauth/facebook` or `composer require opauth/twitter`
+
+*Refer to the link that lists all available strategies and how to install them*
 
 Add this to your `app.php` array of providers:
 
 `'Fakeheal\OpauthLaravel\OpauthLaravelServiceProvider'`
+
 
 Publish the config file and add your strategies:
 
