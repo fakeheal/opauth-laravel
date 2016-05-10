@@ -1,0 +1,22 @@
+{
+  "name": "fakeheal/opauth-laravel",
+  "description": "Package for using Opauth with Laravel",
+  "version": "1.0",
+  "authors": [
+    {
+      "name": "Ivanka Todorova",
+      "email": "fakeheal@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "illuminate/support": "4.2.*",
+    "opauth/opauth": "0.4.x"
+  },
+  "autoload": {
+    "psr-0": {
+      "Fakeheal\\OpauthLaravel\\": "src/"
+    }
+  },
+  "minimum-stability": "stable"
+}

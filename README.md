@@ -1,5 +1,5 @@
-# Opauth For Laravel 3.x
-__Version 0.2 - Release Date: 17.01.2013__
+# Opauth For Laravel 4.x
+__Version 0.2 - Release Date: 10.05.2016__
 
 **This is based on Opauth - http://opauth.org/**
 
@@ -7,46 +7,43 @@ Authorize users with your application implementing multiple Oauth2 providers.
 
 ## Currently Supported
 
-- Facebook
-- Twitter
+- [All available strategies](https://github.com/opauth/opauth/wiki/List-of-strategies)
 
-** I've only tested it with Facebook. This does not mean that it won't work for other Oauth2 providers. Refer to http://opauth.org/ for help on implementing it. **
+**I've only tested it with Facebook. This does not mean that it won't work for other Oauth2 providers. Refer to http://opauth.org/ for help on implementing it.**
 
 ## Usage Example
 
-http://example.com/opauth-bundle/public/facebook
+http://example.com/opauth/social/facebook
 
-```
-Route::get('/', array('uses' => 'home@index'));
+```php
+Route::get('/', function () {
+    echo '<a href="/opauth/social/facebook">Login with facebook</a>';
+});
 
-Route::get('facebook, facebook/(:any)', array('as' => 'facebook', function() {
-	Laravel\IoC::resolve('opauth-facebook');
-}));
-
-Route::post('done', array('as' => 'done', function(){
-	$response = unserialize(base64_decode( $_POST['opauth'] ));
-    echo '<pre>';
-    print_r($response);
-    echo '</pre>';
-}));
+Route::any('opauth/social/{strategy}/{action?}', function () {
+    app('opauth')->run();
+});
 ```
 
-After authorizing you'll be redirect to a link you've specified in:
-/bundles/opauth/start.php
+Publish the config file and add your strategies:
 
-```
-$config = array(
-	'Strategy' => array(
-		'Facebook' => array(
-			'app_id' => 'YOUR_APP_ID',
-			'app_secret' => 'YOUR_APP_SECRET'
-		)		
-	),
-	'security_salt'	=> 'YOURSALTGOESHERE!',
-	'path' 			=> '/opauth-bundle/public/',
-	'callback_transport' => 'post',
-	'callback_url'	=> '/opauth-bundle/public/done'
-);
+`php artisan config:publish socialism/laravel-opauth` 
+
+Config options:
+https://github.com/opauth/opauth/wiki/Opauth-configuration
+
+```php
+return [
+    'Strategy' => array(
+        'Facebook' => array(
+            'app_id' => 'APP_ID',
+            'app_secret' => 'APP_SECRET'
+        )
+    ),
+    'security_salt' => 'RANDOM SOME HASH!',
+    'callback_transport' => 'post',
+    'path' => '/opauth/social/' //This must match the route for app('opauth')->run();
+];
 ```
  
 ##DO NOT FORGET TO CHANGE YOUR APP_ID & APP_SECRET
