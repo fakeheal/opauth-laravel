@@ -65,7 +65,9 @@ Route::any('opauth/social/{strategy}/{action?}', function () {
     app('opauth')->run();
 });
 ```
-Open
+
+Open:
+
 http://localhost:8000/opauth/social/facebook
 
  
